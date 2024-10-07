@@ -11,8 +11,8 @@ var app = express();
 
 // CORS configuration
 app.use(cors({
-    origin: 'http://localhost:5173', // Adjust this to match your frontend's address
-    credentials: true,
+  origin: '*',
+  credentials: true,
 }));
 
 // view engine setup
