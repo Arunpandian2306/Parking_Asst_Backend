@@ -1,22 +1,25 @@
-# Car Parking Application Backend
+# Car Parking Application
 
-## Description
-The Car Parking Application is a RESTful API built with Express.js, allowing users to manage car records. Users can retrieve all cars with pagination and sorting, and update car information by adding new cars to the database.
+A web-based car parking management system that allows users to manage car parking spaces, register cars, and track available spots. It supports user authentication, car registration, and a real-time view of available parking slots.
 
 ## Features
-- Retrieve a paginated list of cars with sorting capabilities.
-- Add new cars to the database.
-- JWT authentication for secure access to API endpoints.
 
-## Technologies Used
-- Node.js
-- Express.js
-- MongoDB
-- JSON Web Token (JWT)
+- User Authentication: Login and registration functionality.
+- Car Management: Register, update, and delete car details.
+- Parking Slot Management: View available and occupied parking slots.
+- Pagination: Display car details with pagination.
+- Real-time Updates: Get real-time updates of car movements in the parking lot.
+- API Integration: API support for fetching and updating parking data.
 
-## Installation
+## Tech Stack
 
-### Prerequisites
-- Node.js (version 10 or later)
-- MongoDB
+- **Frontend**: React, Vite
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Other Tools**: Docker, Postman (for API testing)
 
+## Prerequisites
+
+- **Node.js**: v18.x or later
+- **Docker** 
+- **MongoDB**
