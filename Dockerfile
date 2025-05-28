@@ -1,10 +1,25 @@
-FROM node:lts-alpine
-ENV NODE_ENV=production
+# Use official Node 22 image
+FROM node:22.16.0
+
 WORKDIR /usr/src/app
-COPY ["package.json", "package-lock.json*", "npm-shrinkwrap.json*", "./"]
-RUN npm install --production --silent && mv node_modules ../
+
+# Copy package.json and package-lock.json
+COPY package.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application
 COPY . .
-EXPOSE 3000
-RUN chown -R node /usr/src/app
+
+# Set the ownership of the application files to the node user
+RUN chown -R node:node /usr/src/app
+
+# Switch to the node user
 USER node
+
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Command to run the application
 CMD ["npm", "start"]
